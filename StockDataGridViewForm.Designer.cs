@@ -37,11 +37,13 @@ namespace StockDisplay
             this.endDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.startDateLabel = new System.Windows.Forms.Label();
             this.endDateLabel = new System.Windows.Forms.Label();
+            this.bottomPanel = new System.Windows.Forms.Panel();
+            this.bottomPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // loadDataButton
             // 
-            this.loadDataButton.Location = new System.Drawing.Point(13, 414);
+            this.loadDataButton.Location = new System.Drawing.Point(3, 2);
             this.loadDataButton.Name = "loadDataButton";
             this.loadDataButton.Size = new System.Drawing.Size(129, 27);
             this.loadDataButton.TabIndex = 0;
@@ -52,7 +54,7 @@ namespace StockDisplay
             // updateButton
             // 
             this.updateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.updateButton.Location = new System.Drawing.Point(758, 414);
+            this.updateButton.Location = new System.Drawing.Point(748, 2);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(129, 27);
             this.updateButton.TabIndex = 1;
@@ -67,14 +69,14 @@ namespace StockDisplay
             // 
             // startDateTimePicker
             // 
-            this.startDateTimePicker.Location = new System.Drawing.Point(233, 415);
+            this.startDateTimePicker.Location = new System.Drawing.Point(223, 3);
             this.startDateTimePicker.Name = "startDateTimePicker";
             this.startDateTimePicker.Size = new System.Drawing.Size(200, 22);
             this.startDateTimePicker.TabIndex = 2;
             // 
             // endDateTimePicker
             // 
-            this.endDateTimePicker.Location = new System.Drawing.Point(528, 415);
+            this.endDateTimePicker.Location = new System.Drawing.Point(518, 3);
             this.endDateTimePicker.Name = "endDateTimePicker";
             this.endDateTimePicker.Size = new System.Drawing.Size(200, 22);
             this.endDateTimePicker.TabIndex = 3;
@@ -82,7 +84,7 @@ namespace StockDisplay
             // startDateLabel
             // 
             this.startDateLabel.AutoSize = true;
-            this.startDateLabel.Location = new System.Drawing.Point(155, 419);
+            this.startDateLabel.Location = new System.Drawing.Point(145, 7);
             this.startDateLabel.Name = "startDateLabel";
             this.startDateLabel.Size = new System.Drawing.Size(69, 16);
             this.startDateLabel.TabIndex = 4;
@@ -91,29 +93,38 @@ namespace StockDisplay
             // endDateLabel
             // 
             this.endDateLabel.AutoSize = true;
-            this.endDateLabel.Location = new System.Drawing.Point(450, 419);
+            this.endDateLabel.Location = new System.Drawing.Point(440, 7);
             this.endDateLabel.Name = "endDateLabel";
             this.endDateLabel.Size = new System.Drawing.Size(66, 16);
             this.endDateLabel.TabIndex = 5;
             this.endDateLabel.Text = "End Date:";
             // 
+            // bottomPanel
+            // 
+            this.bottomPanel.Controls.Add(this.updateButton);
+            this.bottomPanel.Controls.Add(this.endDateLabel);
+            this.bottomPanel.Controls.Add(this.loadDataButton);
+            this.bottomPanel.Controls.Add(this.startDateLabel);
+            this.bottomPanel.Controls.Add(this.startDateTimePicker);
+            this.bottomPanel.Controls.Add(this.endDateTimePicker);
+            this.bottomPanel.Location = new System.Drawing.Point(12, 415);
+            this.bottomPanel.Name = "bottomPanel";
+            this.bottomPanel.Size = new System.Drawing.Size(882, 37);
+            this.bottomPanel.TabIndex = 6;
+            // 
             // StockDataGridViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 450);
-            this.Controls.Add(this.endDateLabel);
-            this.Controls.Add(this.startDateLabel);
-            this.Controls.Add(this.endDateTimePicker);
-            this.Controls.Add(this.startDateTimePicker);
-            this.Controls.Add(this.updateButton);
-            this.Controls.Add(this.loadDataButton);
+            this.ClientSize = new System.Drawing.Size(903, 450);
+            this.Controls.Add(this.bottomPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "StockDataGridViewForm";
             this.Text = "StockDataGridViewForm";
             this.Load += new System.EventHandler(this.StockDataGridViewForm_Load);
+            this.bottomPanel.ResumeLayout(false);
+            this.bottomPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -126,6 +137,7 @@ namespace StockDisplay
         private System.Windows.Forms.DateTimePicker endDateTimePicker;
         private System.Windows.Forms.Label startDateLabel;
         private System.Windows.Forms.Label endDateLabel;
+        private System.Windows.Forms.Panel bottomPanel;
     }
 }
 
