@@ -21,5 +21,10 @@ namespace StockDisplay
         {
 
         }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
