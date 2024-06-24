@@ -43,7 +43,7 @@ namespace StockDisplay
             this.loadDataButton.TabIndex = 0;
             this.loadDataButton.Text = "Load Stock";
             this.loadDataButton.UseVisualStyleBackColor = true;
-            this.loadDataButton.Click += new System.EventHandler(this.loadDataButton_Click);
+            this.loadDataButton.Click += new System.EventHandler(this.LoadDataButton_Click);
             // 
             // updateButton
             // 
@@ -53,7 +53,7 @@ namespace StockDisplay
             this.updateButton.TabIndex = 1;
             this.updateButton.Text = "Update";
             this.updateButton.UseVisualStyleBackColor = true;
-            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
+            this.updateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // loadStocksOpenFileDialog
             // 
@@ -69,6 +69,7 @@ namespace StockDisplay
             this.Controls.Add(this.loadDataButton);
             this.Name = "StockDataGridViewForm";
             this.Text = "StockDataGridViewForm";
+            this.Load += new System.EventHandler(this.StockDataGridViewForm_Load);
             this.ResumeLayout(false);
 
         }
