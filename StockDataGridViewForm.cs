@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StockDisplay
 {
-    public partial class Form1 : Form
+    public partial class StockDataGridViewForm : Form
     {
-        public Form1()
+        public StockDataGridViewForm()
         {
             InitializeComponent();
         }
