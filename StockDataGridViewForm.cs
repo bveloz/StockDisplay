@@ -16,5 +16,10 @@ namespace StockDisplay
         {
             InitializeComponent();
         }
+
+        private void loadDataButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
