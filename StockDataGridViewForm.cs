@@ -58,5 +58,6 @@ namespace StockDisplay
             // Set initial directory for the open file dialog
             this.loadStocksOpenFileDialog.InitialDirectory = GetRelativePath();
         }
+        //startdateLabel -> startDatetimePicker distance = 78
     }
 }
