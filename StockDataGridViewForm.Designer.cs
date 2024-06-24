@@ -1,4 +1,6 @@
-﻿namespace StockDisplay
+﻿using System;
+
+namespace StockDisplay
 {
     partial class StockDataGridViewForm
     {
@@ -30,6 +32,7 @@
         {
             this.loadDataButton = new System.Windows.Forms.Button();
             this.updateButton = new System.Windows.Forms.Button();
+            this.loadStocksOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // loadDataButton
@@ -52,6 +55,11 @@
             this.updateButton.UseVisualStyleBackColor = true;
             this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
+            // loadStocksOpenFileDialog
+            // 
+            this.loadStocksOpenFileDialog.FileName = "loadStocksOpenFileDialog";
+            this.loadStocksOpenFileDialog.Filter = "Monthly|*-Month.csv|Weekly|*-Week.csv|Daily|*Day.csv|All Files|*.*";
+            // 
             // StockDataGridViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -69,6 +77,7 @@
 
         private System.Windows.Forms.Button loadDataButton;
         private System.Windows.Forms.Button updateButton;
+        private System.Windows.Forms.OpenFileDialog loadStocksOpenFileDialog;
     }
 }
 
