@@ -38,7 +38,9 @@ namespace StockDisplay
             this.startDateLabel = new System.Windows.Forms.Label();
             this.endDateLabel = new System.Windows.Forms.Label();
             this.bottomPanel = new System.Windows.Forms.Panel();
+            this.stockDataGridView = new System.Windows.Forms.DataGridView();
             this.bottomPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // loadDataButton
@@ -112,11 +114,22 @@ namespace StockDisplay
             this.bottomPanel.Size = new System.Drawing.Size(882, 37);
             this.bottomPanel.TabIndex = 6;
             // 
+            // stockDataGridView
+            // 
+            this.stockDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.stockDataGridView.Location = new System.Drawing.Point(12, 12);
+            this.stockDataGridView.Name = "stockDataGridView";
+            this.stockDataGridView.RowHeadersWidth = 51;
+            this.stockDataGridView.RowTemplate.Height = 24;
+            this.stockDataGridView.Size = new System.Drawing.Size(882, 397);
+            this.stockDataGridView.TabIndex = 7;
+            // 
             // StockDataGridViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 450);
+            this.Controls.Add(this.stockDataGridView);
             this.Controls.Add(this.bottomPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "StockDataGridViewForm";
@@ -124,6 +137,7 @@ namespace StockDisplay
             this.Load += new System.EventHandler(this.StockDataGridViewForm_Load);
             this.bottomPanel.ResumeLayout(false);
             this.bottomPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -138,6 +152,7 @@ namespace StockDisplay
         private System.Windows.Forms.Label startDateLabel;
         private System.Windows.Forms.Label endDateLabel;
         private System.Windows.Forms.Panel bottomPanel;
+        private System.Windows.Forms.DataGridView stockDataGridView;
     }
 }
 
